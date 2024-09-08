@@ -3,7 +3,7 @@ import { NewBook } from '@/books/components/NewBook';
 import { getAllBooks } from '@/books/helpers/book-calls-api';
 import React from 'react'
 
-const BookPage = async () => {
+export default async function BookPage () {
   const books = await getAllBooks()
   return (
     <div className="flex flex-col">
@@ -17,5 +17,3 @@ const BookPage = async () => {
 </div>
   )
 }
-
-export default BookPage

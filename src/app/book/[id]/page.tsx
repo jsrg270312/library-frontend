@@ -1,7 +1,5 @@
 import { getBookById } from "@/books/helpers/book-calls-api";
-import { BookResponse } from "@/books/interfaces/BookResponse";
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
 
 interface Props{
     params: { id: string };

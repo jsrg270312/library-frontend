@@ -4,10 +4,7 @@ import { FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { useForm } from '../helpers/useForm';
 import { createBook } from '../helpers/book-calls-api';
-interface Target {
-    vale: string;
-    name: string;
-}
+
 export const NewBook = () => {
 
   const router = useRouter();
@@ -24,7 +21,7 @@ export const NewBook = () => {
   const onSubmit = async( e: FormEvent ) => {
     e.preventDefault();
     if ( formState.author.trim().length === 0 ) return;
-    const newBook = await createBook(formState); 
+    await createBook(formState); 
     onResetForm();
     router.refresh();
   }
